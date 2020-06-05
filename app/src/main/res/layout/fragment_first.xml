@@ -8,6 +8,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="식사" />
+        android:text="식사탭입니다."
+        android:gravity="center"
+        android:textColor="#2196F3"
+        android:textSize="37sp"
+        android:textStyle="bold" />
 
 </FrameLayout>

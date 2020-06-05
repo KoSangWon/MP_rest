@@ -4,18 +4,21 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/restarea"
+        android:icon="@mipmap/rest_area"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/restarea_round"
+        android:roundIcon="@mipmap/rest_area_round"
         android:supportsRtl="true"
         android:theme="@style/CustomTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
