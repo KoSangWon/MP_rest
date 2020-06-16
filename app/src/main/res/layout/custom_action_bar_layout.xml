@@ -3,11 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
+    android:gravity="center"
     >
 
 
     <ImageButton
-        android:id="@+id/back"
+        android:id="@+id/home"
         android:layout_width="90dp"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
@@ -17,16 +18,18 @@
         android:outlineSpotShadowColor="@color/colorAccent"
         android:padding="6dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/back" />
+        android:src="@drawable/ic_home" />
 
 
     <TextView
+        android:id="@+id/title_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center|center_horizontal|center_vertical"
         android:text="휴게소 미슐랭"
-        android:textColor="#000000"
+        android:fontFamily="@font/lottedream"
+        android:textColor="#3700B3"
         android:textSize="20sp"
         android:textStyle="bold" />
 

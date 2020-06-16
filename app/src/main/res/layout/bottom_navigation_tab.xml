@@ -16,8 +16,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/lottedream"
             android:text="식사"
-            android:textColor="#000000" />
+            android:textColor="#3700B3" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -30,8 +31,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/lottedream"
             android:text="휴게소 맛집 지도"
-            android:textColor="#000000" />
+            android:textColor="#3700B3" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -44,8 +46,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:fontFamily="@font/lottedream"
             android:text="즐겨찾기"
-            android:textColor="#000000" />
+            android:textColor="#3700B3" />
     </RelativeLayout>
 
 
