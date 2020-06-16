@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setCustomView(R.layout.custom_action_bar_layout)
 
         val view = supportActionBar!!.customView
-        val imageButton1 = view.findViewById<ImageButton>(R.id.back)
+        val imageButton1 = view.findViewById<ImageButton>(R.id.home)
         imageButton1.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

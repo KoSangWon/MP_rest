@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/rest_area_round"
         android:supportsRtl="true"
         android:theme="@style/CustomTheme">
+        <activity android:name=".EachLoadMapListActivity"></activity>
+        <activity android:name=".RestPickActivity" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/SplashTheme">
