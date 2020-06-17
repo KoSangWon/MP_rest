@@ -7,16 +7,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.restareareview.R
 
-class EachLoadAdapter(val items:ArrayList<String>):RecyclerView.Adapter<EachLoadAdapter.MyViewHolder>() {
+class LoadListAdapter(val items:ArrayList<String>): RecyclerView.Adapter<LoadListAdapter.MyViewHolder>() {
 
     interface OnItemClickListener{
-        fun OnItemClick(holder:MyViewHolder, view:View, data:String, position: Int)
+        fun OnItemClick(holder:MyViewHolder, view: View, data:String, position: Int)
     }
 
     var itemClickListener:OnItemClickListener?=null
 
-    inner class MyViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
-        var textView:TextView = itemView.findViewById(R.id.loadTextView2)
+    inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+        var textView: TextView = itemView.findViewById(R.id.loadTextView2)
         init{
             itemView.setOnClickListener{
                 itemClickListener?.OnItemClick(this, it, items[adapterPosition], adapterPosition)
@@ -25,7 +25,7 @@ class EachLoadAdapter(val items:ArrayList<String>):RecyclerView.Adapter<EachLoad
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val v = LayoutInflater.from(parent.context).inflate(R.layout.row, parent, false)
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.row2, parent, false)
         return MyViewHolder(v)
     }
 
