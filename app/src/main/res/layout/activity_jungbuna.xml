@@ -6,4 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".EachLoadMap.JungbunaActivity">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#87CEEF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/jungbunae" />
 </androidx.constraintlayout.widget.ConstraintLayout>
