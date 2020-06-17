@@ -13,7 +13,7 @@
         <activity android:name=".EachLoadMapListActivity" />
         <activity android:name=".RestPickActivity" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Splash.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -36,7 +36,12 @@ class EachLoadMapListActivity : AppCompatActivity() {
                 data: String,
                 position: Int
             ) {
-                Toast.makeText(applicationContext, data, Toast.LENGTH_SHORT).show()
+                when(position){
+                    0 -> {
+
+                    }
+                }
+
             }
         }
 
