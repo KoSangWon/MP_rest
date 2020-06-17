@@ -3,7 +3,9 @@ package com.example.restareareview
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.restareareview.Adapter.EachLoadAdapter
@@ -12,7 +14,8 @@ import kotlinx.android.synthetic.main.custom_action_bar_layout.*
 
 class EachLoadMapListActivity : AppCompatActivity() {
 
-    var data:ArrayList<String> = ArrayList<String>()
+    var loadData:ArrayList<String> = ArrayList<String>()
+    lateinit var adapter:EachLoadAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +27,22 @@ class EachLoadMapListActivity : AppCompatActivity() {
 
     private fun initRecyclerView() {
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerView.adapter = EachLoadAdapter(data)
+        adapter = EachLoadAdapter(loadData)
+
+        adapter.itemClickListener = object :EachLoadAdapter.OnItemClickListener{
+            override fun OnItemClick(
+                holder: EachLoadAdapter.MyViewHolder,
+                view: View,
+                data: String,
+                position: Int
+            ) {
+                Toast.makeText(applicationContext, data, Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        recyclerView.adapter = adapter
+
+
     }
 
 
@@ -51,15 +69,13 @@ class EachLoadMapListActivity : AppCompatActivity() {
 
 
     private fun initData(){
-        data.add("경부고속도로")
-        data.add("중부고속도로")
-        data.add("서해안고속도로")
-        data.add("호남고속도로")
-        data.add("남해고속도로")
-        data.add("영동고속도로")
-        data.add("중부내륙고속도로")
-        data.add("중앙고속도로")
+        loadData.add("경부고속도로")
+        loadData.add("중부고속도로")
+        loadData.add("서해안고속도로")
+        loadData.add("호남고속도로")
+        loadData.add("남해고속도로")
+        loadData.add("영동고속도로")
+        loadData.add("중부내륙고속도로")
+        loadData.add("중앙고속도로")
     }
-
-
 }
