@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.restareareview.Adapter.EachLoadAdapter
-import com.example.restareareview.EachLoadMap.JungbuActivity
+import com.example.restareareview.EachLoadMap.*
 import kotlinx.android.synthetic.main.activity_each_load_map_list.*
 import kotlinx.android.synthetic.main.custom_action_bar_layout.*
 
@@ -38,9 +38,15 @@ class EachLoadMapListActivity : AppCompatActivity() {
                 position: Int
             ) {
                 when(position){
-                    0 -> {
-                        startActivity(Intent(baseContext, JungbuActivity::class.java))
-                    }
+                    0 -> startActivity(Intent(baseContext, KyungbuActivity::class.java))
+                    1 -> startActivity(Intent(baseContext, NamhaeActivity::class.java))
+                    2 -> startActivity(Intent(baseContext, SeohaeActivity::class.java))
+                    3 -> startActivity(Intent(baseContext, YoungdongActivity::class.java))
+                    4 -> startActivity(Intent(baseContext, JungbuActivity::class.java))
+                    5 -> startActivity(Intent(baseContext, JungbunaActivity::class.java))
+                    6 -> startActivity(Intent(baseContext, JungangActivity::class.java))
+                    7 -> startActivity(Intent(baseContext, HonamActivity::class.java))
+                    else -> null
                 }
 
             }
