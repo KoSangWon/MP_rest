@@ -2,7 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:elevation="5dp"
+    >
 
     <TextView
         android:id="@+id/loadTextView"
@@ -10,5 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:padding="20dp"
-        android:text="TextView" />
+        android:background="#FFFFFF"
+        android:textSize="17sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/lottedream" />
 </LinearLayout>

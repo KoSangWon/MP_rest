@@ -1,9 +1,10 @@
-package com.example.restareareview
+package com.example.restareareview.Splash
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.example.restareareview.MainActivity
 
 class SplashActivity : AppCompatActivity() {
 

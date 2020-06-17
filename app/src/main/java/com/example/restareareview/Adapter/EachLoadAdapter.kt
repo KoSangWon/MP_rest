@@ -9,8 +9,20 @@ import com.example.restareareview.R
 import kotlinx.android.synthetic.main.row.view.*
 
 class EachLoadAdapter(val items:ArrayList<String>):RecyclerView.Adapter<EachLoadAdapter.MyViewHolder>() {
+
+    interface OnItemClickListener{
+        fun OnItemClick(holder:MyViewHolder, view:View, data:String, position: Int)
+    }
+
+    var itemClickListener:OnItemClickListener?=null
+
     inner class MyViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
         var textView:TextView = itemView.findViewById(R.id.loadTextView)
+        init{
+            itemView.setOnClickListener{
+                itemClickListener?.OnItemClick(this, it, items[adapterPosition], adapterPosition)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
