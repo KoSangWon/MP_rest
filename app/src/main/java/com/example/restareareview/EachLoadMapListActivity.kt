@@ -9,6 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.restareareview.Adapter.EachLoadAdapter
+import com.example.restareareview.EachLoadMap.JungbuActivity
 import kotlinx.android.synthetic.main.activity_each_load_map_list.*
 import kotlinx.android.synthetic.main.custom_action_bar_layout.*
 
@@ -38,7 +39,7 @@ class EachLoadMapListActivity : AppCompatActivity() {
             ) {
                 when(position){
                     0 -> {
-
+                        startActivity(Intent(baseContext, JungbuActivity::class.java))
                     }
                 }
 
@@ -75,12 +76,12 @@ class EachLoadMapListActivity : AppCompatActivity() {
 
     private fun initData(){
         loadData.add("경부고속도로")
-        loadData.add("중부고속도로")
-        loadData.add("서해안고속도로")
-        loadData.add("호남고속도로")
         loadData.add("남해고속도로")
+        loadData.add("서해안고속도로")
         loadData.add("영동고속도로")
+        loadData.add("중부고속도로")
         loadData.add("중부내륙고속도로")
         loadData.add("중앙고속도로")
+        loadData.add("호남고속도로")
     }
 }

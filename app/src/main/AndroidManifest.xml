@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/rest_area_round"
         android:supportsRtl="true"
         android:theme="@style/CustomTheme">
-        <activity android:name=".EachLoadMap.JungbuActivity"></activity>
+        <activity android:name=".EachLoadMap.HonamActivity"></activity>
+        <activity android:name=".EachLoadMap.JungangActivity" />
+        <activity android:name=".EachLoadMap.JungbunaActivity" />
+        <activity android:name=".EachLoadMap.YoungdongActivity" />
+        <activity android:name=".EachLoadMap.SeohaeActivity" />
+        <activity android:name=".EachLoadMap.NamhaeActivity" />
+        <activity android:name=".EachLoadMap.KyungbuActivity" />
+        <activity android:name=".EachLoadMap.JungbuActivity" />
         <activity android:name=".EachLoadMapListActivity" />
         <activity android:name=".RestPickActivity" />
         <activity
