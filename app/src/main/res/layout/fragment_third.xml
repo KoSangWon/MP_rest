@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Fragment.ThirdFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="즐겨찾기탭입니다."
-        android:gravity="center"
-        android:textColor="#2196F3"
-        android:textSize="37sp"
-        android:textStyle="bold"/>
+        android:layout_height="0dp"
+        android:layout_weight="10"/>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/dbbtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="등록하기" />
+
+</LinearLayout>
