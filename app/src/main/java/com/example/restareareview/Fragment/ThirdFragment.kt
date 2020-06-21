@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.example.restareareview.EachLoadMapListActivity
+import com.example.restareareview.MyDBHelper
 import com.example.restareareview.MyMenuActivity
 import com.example.restareareview.R
 

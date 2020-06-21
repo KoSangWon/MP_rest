@@ -6,6 +6,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MyMenuActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="저장번호"/>
+
+        <EditText
+            android:id="@+id/loadIdEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"/>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -103,11 +122,25 @@
             android:text="UPDATE" />
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/testSql"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="휴게소 검색"/>
+        <EditText
+            android:id="@+id/testSql"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"/>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
@@ -115,5 +148,6 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginVertical="10dp">
     </TableLayout>
+    </ScrollView>
 
 </LinearLayout>

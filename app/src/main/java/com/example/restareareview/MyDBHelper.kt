@@ -45,6 +45,7 @@ class MyDBHelper(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null
         val db = this.writableDatabase
         if(db.insert(TABLE_NAME, null, values) > 0){
             val activity = context as MyMenuActivity
+            activity.loadIdEdit.setText("")
             activity.loadNameEdit.setText("")
             activity.restNameEdit.setText("")
             activity.menuNameEdit.setText("")
@@ -67,6 +68,7 @@ class MyDBHelper(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null
             values.put(MENUNAME, data.menuName)
             db.update(TABLE_NAME, values, LOADID+"=?", arrayOf(data.loadId.toString()))
             val activity = context as MyMenuActivity
+            activity.loadIdEdit.setText("")
             activity.loadNameEdit.setText("")
             activity.restNameEdit.setText("")
             activity.menuNameEdit.setText("")
@@ -79,13 +81,14 @@ class MyDBHelper(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null
         return false
     }
 
-    fun deleteProduct(restName: String):Boolean{
-        val strsql = "select * from " + TABLE_NAME + " where " + RESTNAME + " = \'" + restName + "\'"
+    fun deleteProduct(loadid: String):Boolean{
+        val strsql = "select * from " + TABLE_NAME + " where " + LOADID + " = \'" + loadid + "\'"
         val db = this.writableDatabase
         val cursor = db.rawQuery(strsql, null)
         if(cursor.moveToFirst()){
-            db.delete(TABLE_NAME, RESTNAME+"=?", arrayOf(restName))
+            db.delete(TABLE_NAME, LOADID+"=?", arrayOf(loadid))
             val activity = context as MyMenuActivity
+            activity.loadIdEdit.setText("")
             activity.loadNameEdit.setText("")
             activity.restNameEdit.setText("")
             activity.menuNameEdit.setText("")
@@ -170,9 +173,10 @@ class MyDBHelper(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null
                 for(i in 0 until count){
                     val txtView = row.getChildAt(i) as TextView
                     when(txtView.tag){
-                        0 -> activity.loadNameEdit.setText(txtView.text)
-                        1 -> activity.restNameEdit.setText(txtView.text)
-                        2 -> activity.menuNameEdit.setText(txtView.text)
+                        0 -> activity.loadIdEdit.setText(txtView.text)
+                        1 -> activity.loadNameEdit.setText(txtView.text)
+                        2 -> activity.restNameEdit.setText(txtView.text)
+                        3 -> activity.menuNameEdit.setText(txtView.text)
                     }
                 }
             }
