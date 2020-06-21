@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import com.example.restareareview.EachLoadMapListActivity
 import com.example.restareareview.R
-import com.example.restareareview.RestPickActivity
 
 /**
  * A simple [Fragment] subclass.

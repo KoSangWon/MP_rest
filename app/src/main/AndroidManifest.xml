@@ -22,7 +22,7 @@
         <activity android:name=".EachLoadMap.KyungbuActivity" />
         <activity android:name=".EachLoadMap.JungbuActivity" />
         <activity android:name=".EachLoadMapListActivity" />
-        <activity android:name=".RestPickActivity" />
+        <activity android:name=".LoadPickActivity" />
         <activity
             android:name=".Splash.SplashActivity"
             android:theme="@style/SplashTheme">
