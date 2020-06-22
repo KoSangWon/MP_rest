@@ -8,8 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import com.example.restareareview.R
-import com.example.restareareview.RestPickActivity
-import kotlinx.android.synthetic.main.fragment_first.*
+import com.example.restareareview.LoadPickActivity
 
 /**
  * A simple [Fragment] subclass.
@@ -27,7 +26,7 @@ class FirstFragment : Fragment() {
 
         pickbtn.setOnClickListener{
             activity?.let {
-                var intent = Intent(context, RestPickActivity::class.java)
+                var intent = Intent(context, LoadPickActivity::class.java)
                 startActivity(intent)
             }
         }

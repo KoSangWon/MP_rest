@@ -1,24 +1,19 @@
 package com.example.restareareview
 
-import android.content.Intent
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.restareareview.Adapter.EachLoadAdapter
 import com.example.restareareview.Adapter.LoadListAdapter
-import kotlinx.android.synthetic.main.activity_each_load_map_list.*
-import kotlinx.android.synthetic.main.activity_each_load_map_list.recyclerView
 import kotlinx.android.synthetic.main.activity_rest_pick.*
 import org.json.JSONObject
 import org.jsoup.Jsoup
 import java.lang.ref.WeakReference
 import java.net.URL
 
-class RestPickActivity :  AppCompatActivity() {
+class LoadPickActivity :  AppCompatActivity() {
 
     lateinit var adapter:LoadListAdapter
 
@@ -52,15 +47,15 @@ class RestPickActivity :  AppCompatActivity() {
                 data: String,
                 position: Int
             ) {
-//                val intent = Intent(ACTION_VIEW, Uri.parse(adapter.items[position].url))
-//                startActivity(intent)
-                Toast.makeText(applicationContext, "클릭됨", Toast.LENGTH_SHORT).show()
+
+
+                Toast.makeText(applicationContext, data, Toast.LENGTH_SHORT).show()
             }
         }
         recyclerView2.adapter = adapter
     }
 
-    class MyAsyncTask(context:RestPickActivity):AsyncTask<URL, Unit, Unit>(){
+    class MyAsyncTask(context:LoadPickActivity):AsyncTask<URL, Unit, Unit>(){
         val activityreference = WeakReference(context)
 
         override fun doInBackground(vararg params: URL?): Unit {
