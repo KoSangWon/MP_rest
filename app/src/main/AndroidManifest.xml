@@ -3,6 +3,8 @@
     package="com.example.restareareview">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/CustomTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MyMenuActivity"></activity>
+        <activity android:name=".ReviewActivity"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".RestPickActivity" />
+        <activity android:name=".MyMenuActivity" />
         <activity android:name=".EachLoadMap.HonamActivity" />
         <activity android:name=".EachLoadMap.JungangActivity" />
         <activity android:name=".EachLoadMap.JungbunaActivity" />
