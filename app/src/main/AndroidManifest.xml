@@ -3,6 +3,10 @@
     package="com.example.restareareview">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -12,7 +16,11 @@
         android:supportsRtl="true"
         android:theme="@style/CustomTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MyMenuActivity"></activity>
+        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".ReviewActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".RestPickActivity" />
+        <activity android:name=".MyMenuActivity" />
         <activity android:name=".EachLoadMap.HonamActivity" />
         <activity android:name=".EachLoadMap.JungangActivity" />
         <activity android:name=".EachLoadMap.JungbunaActivity" />
@@ -33,6 +41,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDtHog3x24Y-gfA_pbl2uR5uzkiXko0tDY" />
     </application>
 
 </manifest>

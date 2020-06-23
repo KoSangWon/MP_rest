@@ -1,12 +1,16 @@
 package com.example.restareareview
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.widget.ImageButton
 import android.widget.Toast
+import androidx.appcompat.app.ActionBar
 import com.example.restareareview.MyDBHelper.Companion.TABLE_NAME
 import kotlinx.android.synthetic.main.activity_my_menu.*
+import kotlinx.android.synthetic.main.custom_action_bar_layout.*
 
 class MyMenuActivity : AppCompatActivity() {
     lateinit var myDBHelper: MyDBHelper
@@ -14,9 +18,32 @@ class MyMenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_my_menu)
+        setActionBar()
         init()
         getAllRecord()
     }
+
+    private fun setActionBar() {
+        supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
+        supportActionBar?.setDisplayShowCustomEnabled(true)
+        supportActionBar?.setCustomView(R.layout.custom_action_bar_layout)
+
+        val view = supportActionBar!!.customView
+        val homeImageButton = view.findViewById<ImageButton>(R.id.home)
+        homeImageButton.setOnClickListener {
+            val homeIntent = Intent(this, MainActivity::class.java)
+            startActivity(homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK))
+        }
+
+        val questionImageButton = view.findViewById<ImageButton>(R.id.mail)
+        questionImageButton.setOnClickListener {
+            val questionIntent = Intent(this, MainActivity::class.java)
+            startActivity(questionIntent)
+        }
+
+        title_text.text = "즐겨찾기 목록"
+    }
+
 
     fun init(){
         myDBHelper = MyDBHelper(this)
