@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HelpActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:elevation="5dp"
+            android:background="#345D72"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:fontFamily="@font/lottedream"
+            android:text="🇰🇷 휴게소 미슐랭은 전국 휴게소의 식사 메뉴와 실제 후기를 제공하는 어플입니다." />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:elevation="5dp"
+            android:background="#345D72"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:fontFamily="@font/lottedream"
+            android:text="🇰🇷 식사 탭에서는 전국 휴게소의 식사 메뉴와 그에 대한 후기를 볼 수 있습니다." />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:elevation="5dp"
+            android:background="#345D72"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:fontFamily="@font/lottedream"
+            android:text="🇰🇷 휴게소 맛집 지도 탭에서는 각 고속도로의 유명한 메뉴를 지도이미지로 볼 수 있습니다." />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:elevation="5dp"
+            android:background="#345D72"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:fontFamily="@font/lottedream"
+            android:text="🇰🇷 설정 탭에서는 도움말과 즐겨찾기 기능을 사용할 수 있습니다." />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:elevation="5dp"
+            android:background="#345D72"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:fontFamily="@font/lottedream"
+            android:text="🇰🇷 각 화면 오른쪽 상단의 메일버튼을 통해 잘못된 정보수정 요청을 할 수 있습니다." />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:elevation="5dp"
+            android:background="#345D72"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:fontFamily="@font/lottedream"
+            android:text="💻 개발자 정보 : 201511175 고상원" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

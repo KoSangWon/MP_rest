@@ -1,4 +1,4 @@
-package com.example.restareareview.EachLoadMap
+package com.example.restareareview
 
 import android.content.Intent
 import android.net.Uri
@@ -6,18 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import androidx.appcompat.app.ActionBar
-import com.example.restareareview.MainActivity
-import com.example.restareareview.R
 import kotlinx.android.synthetic.main.custom_action_bar_layout.*
 
-class JungbuActivity : AppCompatActivity() {
+class HelpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_jungbu)
+        setContentView(R.layout.activity_help)
         setActionBar()
     }
 
-    private fun setActionBar(){
+    private fun setActionBar() {
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setDisplayShowCustomEnabled(true)
         supportActionBar?.setCustomView(R.layout.custom_action_bar_layout)
@@ -37,6 +35,7 @@ class JungbuActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(questionIntent, ""))
         }
 
-        title_text.text = "중부 고속도로 맛집지도"
+        title_text.text = "도움말"
     }
+
 }

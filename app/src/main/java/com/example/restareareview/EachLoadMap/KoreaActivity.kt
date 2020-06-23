@@ -10,10 +10,10 @@ import com.example.restareareview.MainActivity
 import com.example.restareareview.R
 import kotlinx.android.synthetic.main.custom_action_bar_layout.*
 
-class JungbuActivity : AppCompatActivity() {
+class KoreaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_jungbu)
+        setContentView(R.layout.activity_korea)
         setActionBar()
     }
 
@@ -37,6 +37,6 @@ class JungbuActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(questionIntent, ""))
         }
 
-        title_text.text = "중부 고속도로 맛집지도"
+        title_text.text = "전국 맛집지도"
     }
 }

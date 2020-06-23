@@ -4,35 +4,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/daenamoo"
     tools:context=".Fragment.ThirdFragment">
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
 
     <Button
         android:id="@+id/dbbtn"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="등록하기" />
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_gravity="center"
+        android:elevation="50dp"
+        android:background="@drawable/button_background"
+        android:textColor="#ffffff"
+        android:text="즐겨찾기"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/lottedream"
+        />
+
+    <Button
+        android:id="@+id/restpickbtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="130dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_gravity="center"
+        android:elevation="10dp"
+        android:background="@drawable/button_background"
+        android:textColor="#ffffff"
+        android:textSize="27dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/lottedream"
+        android:text="도움말" />
 
 </LinearLayout>

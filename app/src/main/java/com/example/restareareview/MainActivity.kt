@@ -1,6 +1,7 @@
 package com.example.restareareview
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,38 +12,32 @@ import com.example.restareareview.Adapter.MainFragmentStatePagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-//    lateinit var toolbar: androidx.appcompat.widget.Toolbar
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setToolBar()
-        init()
         configureBottomNavigation()
     }
 
-    private fun init() {
-
-    }
-//    private fun makeToolBar(){
-//        toolbar=findViewById(R.id.myToolBar)
-//        setSupportActionBar(toolbar)
-//    }
     private fun setToolBar(){
         supportActionBar?.displayOptions = ActionBar.DISPLAY_SHOW_CUSTOM
         supportActionBar?.setDisplayShowCustomEnabled(true)
         supportActionBar?.setCustomView(R.layout.custom_action_bar_layout)
 
         val view = supportActionBar!!.customView
-        val imageButton1 = view.findViewById<ImageButton>(R.id.home)
-        imageButton1.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        val homeImageButton = view.findViewById<ImageButton>(R.id.home)
+        homeImageButton.setOnClickListener {
+            val homeIntent = Intent(this, MainActivity::class.java)
+            startActivity(homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK))
         }
 
-        val imageButton2 = view.findViewById<ImageButton>(R.id.mail)
-        imageButton2.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        val questionImageButton = view.findViewById<ImageButton>(R.id.mail)
+        questionImageButton.setOnClickListener {
+            val questionIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jackoss@naver.com", null))
+            questionIntent.putExtra(Intent.EXTRA_SUBJECT, "")
+            questionIntent.putExtra(Intent.EXTRA_TEXT, "")
+            startActivity(Intent.createChooser(questionIntent, ""))
         }
     }
     private fun configureBottomNavigation(){

@@ -7,10 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import com.example.restareareview.EachLoadMapListActivity
-import com.example.restareareview.MyDBHelper
-import com.example.restareareview.MyMenuActivity
-import com.example.restareareview.R
+import com.example.restareareview.*
 
 /**
  * A simple [Fragment] subclass.
@@ -24,6 +21,7 @@ class ThirdFragment : Fragment() {
         val rootView:ViewGroup = inflater.inflate(R.layout.fragment_third, container, false) as ViewGroup
 
         val dbBtn: Button = rootView.findViewById(R.id.dbbtn)
+        val restPickBtn: Button = rootView.findViewById(R.id.restpickbtn)
 
         dbBtn.setOnClickListener{
             activity?.let {
@@ -31,6 +29,14 @@ class ThirdFragment : Fragment() {
                 startActivity(intent)
             }
         }
+
+        restPickBtn.setOnClickListener{
+            activity?.let {
+                var intent = Intent(context, HelpActivity::class.java)
+                startActivity(intent)
+            }
+        }
+
         return rootView
     }
 

@@ -5,8 +5,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/CustomTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MapActivity"></activity>
+        <activity android:name=".EachLoadMap.KoreaActivity"></activity>
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".MapActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".RestPickActivity" />
