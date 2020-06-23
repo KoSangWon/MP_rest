@@ -44,8 +44,10 @@ class ReviewActivity : AppCompatActivity() {
 
         val questionImageButton = view.findViewById<ImageButton>(R.id.mail)
         questionImageButton.setOnClickListener {
-            val questionIntent = Intent(this, MainActivity::class.java)
-            startActivity(questionIntent)
+            val questionIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jackoss@naver.com", null))
+            questionIntent.putExtra(Intent.EXTRA_SUBJECT, "")
+            questionIntent.putExtra(Intent.EXTRA_TEXT, "")
+            startActivity(Intent.createChooser(questionIntent, ""))
         }
 
         val restName = intent.getStringExtra("restKey").toString()

@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/lottedream"
-            android:text="즐겨찾기"
+            android:text="설정"
             android:textColor="#3700B3" />
     </RelativeLayout>
 

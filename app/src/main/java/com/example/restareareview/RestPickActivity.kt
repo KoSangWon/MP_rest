@@ -1,6 +1,7 @@
 package com.example.restareareview
 
 import android.content.Intent
+import android.net.Uri
 import android.os.AsyncTask
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -44,8 +45,10 @@ class RestPickActivity : AppCompatActivity() {
 
         val questionImageButton = view.findViewById<ImageButton>(R.id.mail)
         questionImageButton.setOnClickListener {
-            val questionIntent = Intent(this, MainActivity::class.java)
-            startActivity(questionIntent)
+            val questionIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jackoss@naver.com", null))
+            questionIntent.putExtra(Intent.EXTRA_SUBJECT, "")
+            questionIntent.putExtra(Intent.EXTRA_TEXT, "")
+            startActivity(Intent.createChooser(questionIntent, ""))
         }
 
         val loadName = intent.getStringExtra("loadKey").toString()

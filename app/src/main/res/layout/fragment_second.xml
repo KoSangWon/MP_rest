@@ -4,39 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/daenamoo"
     tools:context=".Fragment.SecondFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <TextView
-            android:id="@+id/textview"
+
+        <Button
+            android:id="@+id/korea_map_btn"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:layout_marginTop="130dp"
+            android:layout_marginBottom="70dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="center"
+            android:elevation="50dp"
+            android:background="@drawable/button_background"
+            android:textColor="#ffffff"
+            android:textSize="27dp"
+            android:textStyle="bold"
             android:fontFamily="@font/lottedream"
-            android:textSize="20sp"
-            android:textColor="#000000"
-            android:gravity="center"
-            android:text="전국 휴게소 맛집 지도" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="전국 지도 보러가기" />
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6"
-            android:src="@drawable/jeonkuk" />
 
         <Button
             android:id="@+id/each_map_btn"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="130dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="center"
+            android:elevation="50dp"
+            android:background="@drawable/button_background"
             android:textColor="#ffffff"
+            android:textSize="27dp"
+            android:textStyle="bold"
             android:fontFamily="@font/lottedream"
-            android:background="#6200EE"
-            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             android:text="고속도로별 지도 보러가기" />
 
 

@@ -1,6 +1,7 @@
 package com.example.restareareview.EachLoadMap
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
@@ -30,8 +31,10 @@ class KyungbuActivity : AppCompatActivity() {
 
         val questionImageButton = view.findViewById<ImageButton>(R.id.mail)
         questionImageButton.setOnClickListener {
-            val questionIntent = Intent(this, MainActivity::class.java)
-            startActivity(questionIntent)
+            val questionIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "jackoss@naver.com", null))
+            questionIntent.putExtra(Intent.EXTRA_SUBJECT, "")
+            questionIntent.putExtra(Intent.EXTRA_TEXT, "")
+            startActivity(Intent.createChooser(questionIntent, ""))
         }
 
         title_text.text = "경부 고속도로 맛집지도"
