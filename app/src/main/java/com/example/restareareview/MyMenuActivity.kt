@@ -57,20 +57,20 @@ class MyMenuActivity : AppCompatActivity() {
             val mydata = MyData(0, loadName, restName, menuName)
             val result = myDBHelper.insertData(mydata)
             if(result){
-                Toast.makeText(this, "DB INSERT SUCCESS", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "저장 성공", Toast.LENGTH_SHORT).show()
                 getAllRecord()
             }else{
-                Toast.makeText(this, "DB INSERT FAILED", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "저장 실패", Toast.LENGTH_SHORT).show()
             }
         }
 
         deletebtn.setOnClickListener {
             var result = myDBHelper.deleteProduct(loadIdEdit.text.toString())
             if(result){
-                Toast.makeText(this, "DELETE SUCCESS", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "삭제 성공", Toast.LENGTH_SHORT).show()
                 getAllRecord()
             }else{
-                Toast.makeText(this, "DELETE FAILED", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "삭제 실패", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -82,10 +82,10 @@ class MyMenuActivity : AppCompatActivity() {
             val data = MyData(loadId, loadName, restName, menuName)
             val result = myDBHelper.updateProduct(data)
             if(result){
-                Toast.makeText(this, "UPDATE SUCCESS", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "수정 성공", Toast.LENGTH_SHORT).show()
                 getAllRecord()
             }else{
-                Toast.makeText(this, "UPDATE FAILED", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "수정 실패", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -93,9 +93,9 @@ class MyMenuActivity : AppCompatActivity() {
             val name = restNameEdit.text.toString()
             val result = myDBHelper.findProduct(name)
             if(result){
-                Toast.makeText(this, "RECORD FOUND", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "검색 완료", Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(this, "NO MATCH FOUND", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "찾는 휴게소가 없습니다.", Toast.LENGTH_SHORT).show()
             }
         }
 

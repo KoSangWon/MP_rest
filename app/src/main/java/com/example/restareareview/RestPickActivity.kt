@@ -95,9 +95,9 @@ class RestPickActivity : AppCompatActivity() {
 
                 startActivity(nextIntent)
 
-
-                Toast.makeText(applicationContext, data, Toast.LENGTH_SHORT).show()
-                Toast.makeText(applicationContext, loadName, Toast.LENGTH_SHORT).show()
+//
+//                Toast.makeText(applicationContext, data, Toast.LENGTH_SHORT).show()
+//                Toast.makeText(applicationContext, loadName, Toast.LENGTH_SHORT).show()
 
             }
         }
