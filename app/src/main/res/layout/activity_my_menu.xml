@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/white"
     tools:context=".MyMenuActivity">
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,12 +17,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:text="저장번호"/>
 
         <EditText
             android:id="@+id/loadIdEdit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:layout_weight="3"/>
 
     </LinearLayout>
@@ -36,12 +43,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:text="고속도로"/>
 
         <EditText
             android:id="@+id/loadNameEdit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:layout_weight="3"/>
 
     </LinearLayout>
@@ -56,12 +69,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:text="휴게소"/>
 
         <EditText
             android:id="@+id/restNameEdit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:layout_weight="3"/>
 
     </LinearLayout>
@@ -76,12 +95,18 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:text="메뉴"/>
 
         <EditText
             android:id="@+id/menuNameEdit"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:layout_weight="3"/>
 
     </LinearLayout>
@@ -98,28 +123,44 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="INSERT" />
+            android:background="@drawable/button_background"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:fontFamily="@font/lottedream"
+            android:text="추가" />
 
         <Button
             android:id="@+id/deletebtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="DELETE" />
+            android:background="@drawable/button_background"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            android:fontFamily="@font/lottedream"
+            android:text="삭제" />
 
         <Button
             android:id="@+id/findbtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="FIND" />
+            android:background="@drawable/button_background"
+            android:textColor="#ffffff"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
+            android:text="찾기" />
 
         <Button
             android:id="@+id/updatebtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="UPDATE" />
+            android:textColor="#ffffff"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
+            android:background="@drawable/button_background"
+            android:text="수정" />
     </LinearLayout>
 
     <LinearLayout
@@ -131,23 +172,32 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:text="휴게소 검색"/>
         <EditText
             android:id="@+id/testSql"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="18dp"
             android:layout_weight="3"/>
     </LinearLayout>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="10dp">
-    </TableLayout>
+        <TableLayout
+            android:id="@+id/tableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:textColor="#000000"
+            android:fontFamily="@font/lottedream"
+            android:textSize="16dp">
+        </TableLayout>
     </ScrollView>
 
 </LinearLayout>

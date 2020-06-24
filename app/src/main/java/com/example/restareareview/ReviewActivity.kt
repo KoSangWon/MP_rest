@@ -99,7 +99,6 @@ class ReviewActivity : AppCompatActivity() {
             if(activity==null || activity.isFinishing){
                 return
             }
-            activity.swiperefresh4.isRefreshing = false
             activity.adapter.notifyDataSetChanged()
         }
     }

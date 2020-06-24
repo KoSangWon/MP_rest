@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/lottedream"
-            android:text="휴게소 맛집 지도"
+            android:text="맛집 지도"
             android:textColor="#3700B3" />
     </RelativeLayout>
 

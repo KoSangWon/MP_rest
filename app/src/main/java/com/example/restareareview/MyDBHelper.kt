@@ -159,8 +159,10 @@ class MyDBHelper(val context: Context) : SQLiteOpenHelper(context, DB_NAME, null
             val textView = TextView(activity)
             textView.layoutParams = viewParam
             textView.text = cursor.getColumnName(i)
-            textView.setBackgroundColor(Color.LTGRAY)
-            textView.textSize = 15.0f
+            textView.setBackgroundColor(Color.BLACK)
+            textView.textSize = 18.0f
+            textView.setTextColor(Color.BLACK)
+            textView.fontFeatureSettings = "@drawable/lottedream"
             textView.gravity = Gravity.CENTER
         }
         activity.tableLayout.addView(tablerow)

@@ -5,12 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/white"
     tools:context=".ReviewActivity">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swiperefresh4"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView5"
@@ -21,7 +19,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp" />
 
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 
